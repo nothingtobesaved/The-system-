@@ -27,69 +27,32 @@ nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:#050b17f2;bor
 .warn{border-left-color:#ffb84d}.reduce *{transition:none!important;animation:none!important}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
-/* THE SYSTEM — Hunter Edition visual refinement */
-:root{
- --bg:#050812;--p:#0a1020;--p2:#0d1830;--l:#233b61;
- --c:#65e7ff;--c2:#168bc8;--t:#e8f4ff;--m:#91a7c7;
- --ok:#65f0b2;--bad:#ff718b;
-}
-html{scroll-behavior:smooth}
-body{
- background:
-  radial-gradient(ellipse at 50% -15%,rgba(21,100,181,.30),transparent 48%),
-  radial-gradient(ellipse at 100% 30%,rgba(0,211,255,.07),transparent 35%),
-  #050812;
- color:var(--t);letter-spacing:.01em
-}
-main{max-width:1180px;padding:clamp(12px,2vw,24px);padding-bottom:24px}
-h1{font-size:clamp(1.55rem,3vw,2.1rem);text-shadow:0 0 22px #42cfff26}
-h2{font-size:1.08rem;letter-spacing:.08em;text-transform:uppercase}
-.card{
- position:relative;isolation:isolate;overflow:hidden;
- background:linear-gradient(145deg,rgba(15,29,55,.97),rgba(7,13,27,.98));
- border:1px solid #29496f;border-left:2px solid var(--c);
- border-radius:4px;padding:clamp(14px,2vw,22px);margin-bottom:14px;
- clip-path:none;box-shadow:0 8px 28px #0005,inset 0 1px 0 #9be9ff0c
-}
-.card:after{content:"";position:absolute;z-index:-1;top:0;right:0;width:70px;height:2px;background:linear-gradient(90deg,transparent,var(--c));opacity:.8}
-.grid{gap:14px}
-@media(min-width:760px){.grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}}
-button,select,input{
- border:1px solid #2a4d77;border-radius:4px;background:#081326;
- transition:background .18s,border-color .18s,box-shadow .18s,transform .18s
-}
-button{background:linear-gradient(180deg,#122b4d,#0a1b34);border-color:#287eb4}
-button:hover{border-color:var(--c);box-shadow:0 0 16px #2edbff24}
-button:active{transform:translateY(1px)}
-button.pri{background:linear-gradient(135deg,#6beaff,#199acb);border-color:#7cecff;color:#04101a;box-shadow:0 0 18px #20c9ff22}
-button.dng{background:#24101c;border-color:#a63b5a;color:#ff9bad}
-.row{gap:9px}
-.bar{height:12px;border-radius:2px;border-color:#25476c;background:#040a14}
-.bar i{background:linear-gradient(90deg,#1686d5,#61edff);box-shadow:0 0 15px #42dfff88}
-.big{font-size:clamp(2.2rem,5vw,3.1rem);letter-spacing:-.04em;text-shadow:0 0 22px #35e0ff44}
-.rank{border-radius:4px;background:linear-gradient(145deg,#102b4a,#06101f);border-color:#5fe7ff;box-shadow:0 0 24px #16caff20;text-shadow:0 0 18px #55e9ff}
-.q{padding:13px 0;border-bottom:1px solid #1c3150;gap:8px}
-.q:last-child{border-bottom:0}
-.q .n{line-height:1.55;min-width:180px}
-.tag{border-radius:3px;border-color:#2a4c72;background:#09162a;padding:2px 7px;font-size:.76rem}
-.ms span{border-radius:3px;border-color:#203b5d;background:#071020}
-.ms span.on{background:#0c2d45;box-shadow:0 0 12px #35e0ff20}
-nav{background:rgba(4,9,19,.96);backdrop-filter:blur(16px);border-top:1px solid #245b82;box-shadow:0 -8px 28px #0005}
-nav button{font-size:.82rem;letter-spacing:.02em;color:#a9bdd8}
-nav button.on{color:var(--c);background:linear-gradient(180deg,#12314a44,transparent);border-top-color:var(--c);text-shadow:0 0 12px #35e0ff55}
-#toast .t{border-radius:4px;background:#0b1b31;border-color:var(--c);box-shadow:0 0 22px #35e0ff30}
-#toast .t.e{border-color:var(--bad)}
-input:focus,select:focus,button:focus-visible{outline:2px solid #62eaff;outline-offset:2px}
-a{color:var(--c)}
-@media(max-width:560px){
- body{font-size:15px}
- main{padding:10px;padding-bottom:20px}
- .card{padding:13px}
- .big{font-size:2.1rem}
- nav button{font-size:.72rem;padding-inline:2px}
- .q .n{flex-basis:100%}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* THE SYSTEM — Solo Leveling-inspired mobile interface refresh */
+:root{--bg:#03050b;--p:#080e1b;--p2:#0b1426;--l:#1b4770;--c:#54d9ff;--c2:#1686d8;--t:#e8f5ff;--m:#8ba5c0;--ok:#62e6bc;--bad:#ff718b;--gold:#e6c77b}
+html{background:var(--bg);scroll-behavior:smooth}
+body{min-height:100vh;background:radial-gradient(ellipse at 50% -16%,#102e52 0%,#07111f 36%,#03050b 72%);color:var(--t);font-family:Inter,Roboto,"Segoe UI",system-ui,sans-serif;letter-spacing:.005em;padding-bottom:94px}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;z-index:-1;background-image:linear-gradient(#18395a22 1px,transparent 1px),linear-gradient(90deg,#18395a22 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,#000,transparent 78%)}
+main{max-width:760px;padding:12px 14px 24px}
+.syshead{display:flex;align-items:center;gap:12px;margin:0 0 18px;padding:12px 2px 15px;border-bottom:1px solid #2b6282;position:relative}
+.syslogo{width:42px;height:42px;display:grid;place-items:center;flex:none;border:1px solid #62dfff;background:linear-gradient(145deg,#153b60,#07101e);color:#a9efff;font-size:22px;font-weight:900;clip-path:polygon(25% 0,75% 0,100% 25%,100% 75%,75% 100%,25% 100%,0 75%,0 25%);box-shadow:0 0 18px #26baff26}
+.sysname{font-size:13px;letter-spacing:.22em;font-weight:850;color:#f0f8ff;line-height:1.3}.sys-sub{font-size:10px;letter-spacing:.16em;color:#83b9d5;margin-top:4px}.sys-live{margin-left:auto;align-self:flex-start;white-space:nowrap;font-size:9px;letter-spacing:.12em;color:#7be9ff;border:1px solid #235a78;background:#071625;padding:5px 7px;border-radius:2px}.sys-live:before{content:"";display:inline-block;width:5px;height:5px;background:#68e7d0;border-radius:50%;margin-right:5px;box-shadow:0 0 7px #68e7d0}
+h1,h2,h3{letter-spacing:.04em}h1{font-size:clamp(1.35rem,5vw,1.85rem);font-weight:800;color:#f1f8ff}h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.15em;color:#82dfff;margin-bottom:14px}h3{font-size:.95rem}
+.card{position:relative;overflow:hidden;background:linear-gradient(135deg,#0b1728f5,#070d18f7 72%);border:1px solid #1c3e5c;border-left:1px solid #1c3e5c;border-radius:4px;clip-path:none;padding:16px;margin-bottom:12px;box-shadow:0 8px 24px #0003}
+.card:before{content:"";position:absolute;top:0;left:0;width:34px;height:2px;background:#69e2ff;box-shadow:0 0 9px #46cfff;pointer-events:none}.card:after{content:"";position:absolute;right:0;bottom:0;width:20px;height:1px;background:#3d86b2;pointer-events:none}
+.grid{gap:12px}@media(min-width:680px){.grid{grid-template-columns:1fr 1fr}}
+button,select,input{font:inherit;color:var(--t);background:#07111f;border:1px solid #284761;padding:10px 12px;min-height:44px;border-radius:3px}button{cursor:pointer;transition:background .18s,border-color .18s,box-shadow .18s;background:linear-gradient(180deg,#102b45,#091727);border-color:#2b6486;font-size:.87rem}button:hover{border-color:#6de5ff;box-shadow:0 0 14px #38bfff24}button:active{transform:translateY(1px)}button.pri{background:linear-gradient(110deg,#77e5ff,#29a9e2);color:#03101a;border:1px solid #8aeaff;font-weight:800;box-shadow:0 0 16px #21b5ed1f}button.dng{background:#1a0c17;border-color:#8e3b5a;color:#ff9db1}button.sm{font-size:.8rem;min-height:38px;padding:7px 10px}button:disabled{opacity:.35;box-shadow:none}
+input[type=text],input[type=number],select{max-width:100%;border-radius:3px}input::placeholder{color:#66819c}input:focus,select:focus{outline:1px solid #5bdfff;border-color:#5bdfff;box-shadow:0 0 0 3px #31baff17}
+.row{gap:8px}.grow{min-width:0}.m{color:#8ba7c1;font-size:.82rem}.big{font-size:clamp(2.8rem,13vw,4.4rem);font-weight:750;letter-spacing:.04em;color:#dff8ff;text-shadow:0 0 22px #38bfff72;font-variant-numeric:tabular-nums}
+.bar{height:7px;border:0;border-radius:10px;background:#14283b;overflow:hidden}.bar i{border-radius:10px;background:linear-gradient(90deg,#1686d8,#60e7ff);box-shadow:0 0 12px #4bdcff8a}
+.rank{width:70px;height:78px;font-size:1.85rem;background:linear-gradient(145deg,#102a47,#07101d);border:1px solid #5bdcff;clip-path:polygon(50% 0,90% 20%,90% 80%,50% 100%,10% 80%,10% 20%);text-shadow:0 0 14px #4bdcff;box-shadow:inset 0 0 18px #30bfff19}
+.q{gap:10px;padding:12px 0;border-bottom:1px solid #183047;align-items:center}.q:last-child{border-bottom:0}.q .n{flex:1 1 150px;min-width:0}.done .n{color:#8297aa}.tag{border-radius:3px;border-color:#244761;background:#091725;padding:3px 7px;font-size:.72rem;letter-spacing:.02em}
+nav{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;padding:7px 6px max(7px,env(safe-area-inset-bottom));background:#040912f5;border-top:1px solid #24506d;box-shadow:0 -8px 24px #0006;backdrop-filter:blur(14px);z-index:5}nav button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:0;min-height:56px;padding:4px 1px;border:0;border-radius:4px;background:transparent;color:#6f8aa3;font-size:10px;letter-spacing:.02em}nav button .nav-ico{font-size:19px;line-height:1}nav button.on{color:#9ceeff;background:linear-gradient(180deg,#12334b80,transparent);box-shadow:inset 0 1px #63ddff}nav button.on:after{content:"";position:absolute;top:0;left:28%;right:28%;height:2px;background:#69e5ff;box-shadow:0 0 8px #42d8ff}nav button:hover{box-shadow:none}
+#toast{top:10px;width:min(92vw,520px)}.t{background:#071725;border:1px solid #5bdfff;border-radius:3px;padding:12px 14px;box-shadow:0 0 24px #20aeea26}.t.e{border-color:var(--bad)}
+.ms span{border-radius:3px}.ms span.on{box-shadow:0 0 12px #35e0ff28}.bars{height:100px}.bars i{border-radius:3px 3px 0 0;background:linear-gradient(0deg,#176cb0,#67ddff);box-shadow:0 0 10px #28a9e733}
+.warn{border-color:#82673b}.warn:before{background:#e6c77b}.reduce *{transition:none!important;animation:none!important}
+/* Compact form rows on narrow screens */
+@media(max-width:420px){main{padding:10px 10px 20px}.card{padding:13px}.row{gap:6px}.syshead{margin-bottom:12px}.sys-live{font-size:8px;padding:4px 5px}button{font-size:.82rem}.q .n{flex-basis:120px}.rank{width:62px;height:70px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 
 </style></head><body>
 <div id="toast" aria-live="polite"></div><main id="app"></main>
@@ -158,21 +121,22 @@ ${idle?`<div class="row" style="justify-content:center"><select id="subj" aria-l
 <div class="card"><h2>Daily goal</h2>${gbar()}</div>
 <div class="card"><h2>Session history</h2>${S.sessions.length?S.sessions.slice(-20).reverse().map(x=>`<div class="q"><span class="n">${x.date} · ${esc(x.subject)}</span><b>${x.min} min</b></div>`).join(""):'<p class="m">No sessions yet. Start your first focus block.</p>'}</div>`},
 chapters(){return CH.map(s=>`<div class="card"><h2>${s}</h2><form data-f="addch" data-s="${s}" class="row"><input class="grow" type="text" name="n" placeholder="Add chapter name" required maxlength="80" aria-label="Chapter name"><button class="pri">Add</button></form>${S.chapters.filter(c=>c.subject===s).map(c=>`<div class="q"><span class="n">${esc(c.name)}</span><select data-c="chst" data-id="${c.id}" aria-label="Status" style="width:auto">${ST.map(x=>`<option ${c.st===x?"selected":""}>${x}</option>`).join("")}</select><label class="m">Lectures <input type="number" min="0" value="${c.lec}" data-c="chlec" data-id="${c.id}" style="width:70px"></label><label class="m"><input type="checkbox" data-c="chdpp" data-id="${c.id}" ${c.dpp?"checked":""}> DPP</label><label class="m"><input type="checkbox" data-c="chpyq" data-id="${c.id}" ${c.pyq?"checked":""}> PYQ</label><button class="sm dng" data-a="delch" data-id="${c.id}">Delete</button></div>`).join("")||'<p class="m">No chapters yet. Add your own; nothing is pre-filled.</p>'}</div>`).join("")},
-shop(){const t=totals(S);return`<div class="card"><h2>Reward shop</h2><p class="big">${t.coins} <span class="m">coins (game currency only)</span></p><form data-f="addshop" class="row"><input class="grow" type="text" name="n" placeholder="Reward name" required maxlength="60" aria-label="Reward name"><input name="p" type="number" min="1" max="1000" value="30" style="width:100px" aria-label="Price"><button class="pri">Add reward</button></form></div>
+shop(){const t=totals(S);return`<div class="row" style="margin-bottom:12px"><button data-a="go" data-v="profile">← Hunter profile</button></div><div class="card"><h2>Reward shop</h2><p class="big">${t.coins} <span class="m">coins (game currency only)</span></p><form data-f="addshop" class="row"><input class="grow" type="text" name="n" placeholder="Reward name" required maxlength="60" aria-label="Reward name"><input name="p" type="number" min="1" max="1000" value="30" style="width:100px" aria-label="Price"><button class="pri">Add reward</button></form></div>
 <div class="card">${S.shop.map(i=>`<div class="q"><span class="n">${esc(i.name)}<br><span class="tag">${i.price} coins</span> ${t.coins>=i.price?'<span class="tag" style="color:var(--ok)">affordable</span>':'<span class="tag" style="color:var(--bad)">need '+(i.price-t.coins)+' more</span>'}</span><button class="pri" data-a="buy" data-id="${i.id}" ${t.coins<i.price?"disabled":""}>Buy</button><button class="sm dng" data-a="delshop" data-id="${i.id}">Remove</button></div>`).join("")||'<p class="m">Add something to look forward to.</p>'}</div>
 <div class="card"><h2>Purchases</h2>${S.tx.filter(x=>x.type==="shop").slice(-15).reverse().map(x=>`<div class="q"><span class="n">${esc(x.label)}</span><span>${x.coins}c</span></div>`).join("")||'<p class="m">No purchases yet.</p>'}</div>`},
 profile(){const t=totals(S),L=lvl(t.xp),fm=S.sessions.reduce((a,x)=>a+x.min,0),days=new Set(S.sessions.map(x=>x.date)),best=Math.max(0,...[...days].map(d=>dayMin(S,d))),r30=[...days].filter(d=>Date.now()-new Date(d)<30*864e5).length,kn=S.chapters.filter(c=>["First pass completed","Revised","Test completed"].includes(c.st)).length,qd=S.quests.filter(q=>q.status==="done").length;
 const wk=[...Array(7)].map((_,i)=>{const d=dstr(Date.now()-(6-i)*864e5);return[d.slice(5),dayMin(S,d)]}),mx=Math.max(60,...wk.map(x=>x[1]));const mo=S.sessions.filter(x=>x.date.slice(0,7)===today().slice(0,7)).reduce((a,x)=>a+x.min,0);
 const sub=SUBJ.map(s=>[s,S.sessions.filter(x=>x.subject===s).reduce((a,x)=>a+x.min,0)]);
 return`<div class="card"><div class="row"><div class="rank">${rank(L.l)}</div><div class="grow"><form data-f="name" class="row"><input class="grow" type="text" name="n" value="${esc(S.name)}" maxlength="24" aria-label="Hunter name"><button>Save name</button></form><div class="m">Level ${L.l} · ${t.xp} XP · ${t.coins} coins · ${qd} quests done</div></div></div></div>
+<div class="card"><div class="row"><div class="grow"><h2>Hunter resources</h2><p class="m">Spend earned coins on rewards you choose.</p></div><button class="pri" data-a="go" data-v="shop">Open reward shop →</button></div></div>
 <div class="grid"><div class="card"><h2>Attributes</h2>${[["Focus",Math.floor(fm/60),"focused hours"],["Knowledge",kn,"chapters past first pass"],["Discipline",days.size,"active study days"],["Consistency",r30,"active days in last 30"],["Endurance",Math.floor(best/60),"hours in your best day"]].map(a=>`<div class="q"><b class="n">${a[0]} ${a[1]}</b><span class="m">${a[2]}</span></div>`).join("")}</div>
 <div class="card"><h2>Titles</h2>${Object.keys(ACH).map(k=>`<div class="q"><span class="n" style="${S.ach[k]?"":"opacity:.45"}"><b>${ACH[k][0]}</b><br><span class="m">${ACH[k][1]}</span></span>${S.ach[k]?"✓":""}</div>`).join("")}</div></div>
 <div class="card"><h2>Last 7 days (minutes)</h2><div class="bars">${wk.map(x=>`<div><i style="height:${x[1]/mx*80}px"></i>${x[1]}<br>${x[0]}</div>`).join("")}</div><p class="m">This month: ${Math.round(mo/6)/10} h · By subject: ${sub.map(s=>s[0]+" "+Math.round(s[1]/6)/10+"h").join(", ")}</p></div>
 <div class="card"><h2>Activity log</h2>${S.tx.slice(-20).reverse().map(x=>`<div class="q ${x.undone?"done":""}"><span class="n">${new Date(x.ts).toLocaleString()} · ${esc(x.label)}</span><span>${x.xp?"+"+x.xp+" XP ":""}${x.coins?(x.coins>0?"+":"")+x.coins+"c":""}${x.undone?" (undone)":""}</span></div>`).join("")||'<p class="m">Nothing yet.</p>'}</div>
 <div class="card"><h2>Settings and backup</h2><div class="row"><button class="pri" data-a="export">Export backup</button><label class="row"><span>Import backup</span><input type="file" accept=".json,application/json" data-c="import"></label></div><label class="row"><input type="checkbox" data-c="reduce" ${S.set.reduce?"checked":""}> Reduce motion</label><label class="row"><input type="checkbox" data-c="rest" ${S.set.rest[today()]?"checked":""}> Rest day today (pauses daily quests; nothing is lost)</label><p><button class="dng" data-a="reset">Reset all progress</button></p></div>
 <div class="card"><h2>Rules</h2><p class="m">Quest XP and coins are granted once when you confirm Complete; Undo reverses them exactly. Focus sessions give 1 XP per minute and 1 coin per 10 minutes. Level n to n+1 costs 100 + 25×(n−1) XP. Ranks by level: E start, D 5, C 10, B 20, A 35, S 50. Nothing is ever deducted for missed days; XP, levels and titles never go down. Coins are fictional and can only be spent on rewards you define. Attributes are computed from your real logged activity. Data lives in this browser only; clearing site data erases it, so export backups regularly.</p></div>`}};
-const TABS=[["home","Home"],["quests","Quests"],["study","Study"],["chapters","Chapters"],["shop","Shop"],["profile","Profile"]];
-function render(){document.body.classList.toggle("reduce",!!S.set.reduce);$("#nav").innerHTML=TABS.map(t=>`<button data-a="go" data-v="${t[0]}" class="${view===t[0]?"on":""}" ${view===t[0]?'aria-current="page"':""}>${t[1]}</button>`).join("");$("#app").innerHTML=views[view]();tick()}
+const TABS=[["home","⌂","System"],["quests","◇","Quests"],["study","◷","Focus"],["chapters","▤","Chapters"],["profile","♙","Hunter"]];
+function render(){document.body.classList.toggle("reduce",!!S.set.reduce);$("#nav").innerHTML=TABS.map(t=>`<button data-a="go" data-v="${t[0]}" class="${view===t[0]?"on":""}" ${view===t[0]?'aria-current="page"':""}><span class="nav-ico" aria-hidden="true">${t[1]}</span><span>${t[2]}</span></button>`).join("");$("#app").innerHTML=`<header class="syshead"><div class="syslogo">S</div><div><div class="sysname">THE SYSTEM</div><div class="sys-sub">HUNTER INTERFACE · NEET PROTOCOL</div></div><div class="sys-live">SYSTEM ONLINE</div></header>${views[view]()}`;tick()}
 /* ---- actions ---- */
 const A={go:d=>{view=d.v;render();scrollTo(0,0)},
 done:d=>{if(completeQuest(S,d.id)){const q=S.quests.find(x=>x.id===d.id);toast("Quest complete: +"+q.xp+" XP"+(q.coins?", +"+q.coins+" coins":""));const before=lvl(totals(S).xp-q.xp).l,now=lvl(totals(S).xp).l;if(now>before)toast("LEVEL UP! Level "+now+" · Rank "+rank(now));checkAch();save();render()}},
